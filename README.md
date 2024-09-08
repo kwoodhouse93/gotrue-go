@@ -1,10 +1,15 @@
 # gotrue-go
 
+### ⚠️ This repository is now archived
+
+To find the latest release, please see [supabase-community/auth-go](https://github.com/supabase-community/auth-go) instead
+
+---
+
 ![example branch parameter](https://github.com/supabase-community/gotrue-go/actions/workflows/test.yaml/badge.svg?branch=main)
 [![codecov](https://codecov.io/gh/supabase-community/gotrue-go/branch/main/graph/badge.svg?token=JQQJKETMRX)](https://codecov.io/gh/supabase-community/gotrue-go)
 ![GitHub](https://img.shields.io/github/license/supabase-community/gotrue-go)
 [![Go Reference](https://pkg.go.dev/badge/github.com/supabase-community/gotrue-go.svg)](https://pkg.go.dev/github.com/supabase-community/gotrue-go)
-
 
 A Golang client library for the [Supabase GoTrue](https://github.com/supabase/gotrue) API.
 
@@ -29,6 +34,7 @@ go get github.com/supabase-community/gotrue-go
 ```
 
 ### Usage
+
 ```go
 package main
 
@@ -90,6 +96,7 @@ if err != nil {
 ```
 
 ### WithToken
+
 ```go
 func (*Client) WithToken(token string) *Client
 ```
@@ -97,6 +104,7 @@ func (*Client) WithToken(token string) *Client
 Returns a client that will use the provided token in the `Authorization` header on all requests.
 
 ### WithCustomGoTrueURL
+
 ```go
 func (*Client) WithCustomGoTrueURL(url string) *Client
 ```
@@ -104,6 +112,7 @@ func (*Client) WithCustomGoTrueURL(url string) *Client
 Returns a client that will use the provided URL instead of `https://<project_ref>.supabase.com/auth/v1/`. This allows you to use the client with your own deployment of the GoTrue server without relying on a Supabase-hosted project.
 
 ### WithClient
+
 ```go
 func (*Client) WithClient(client http.Client) *Client
 ```
@@ -125,4 +134,3 @@ To interact with docker compose, you can also use `make up` and `make down`.
 Prior users of [`gotrue-js`](https://github.com/supabase/gotrue-js) may be familiar with its subscription mechanism and session management - in line with its ability to be used as a client-side authentication library, in addition to use on the server.
 
 As Go is typically used on the backend, this library acts purely as a convenient wrapper for interacting with a GoTrue server. It provides no session management or subscription mechanism.
-
